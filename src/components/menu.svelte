@@ -36,6 +36,6 @@
 		<MenuItem {item}
 			showSubMenu={item.children != null && hoverItem == item}
 			on:menu-item-hover={e => hoverItem = e.detail}
-			on:menu-item-command-executed/>
+			on:menu-item-command-executed={e => dispatch('menu-item-command-executed', e)}/>
 	{/each}
 </div>
